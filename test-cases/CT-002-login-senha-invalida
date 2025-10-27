@@ -1,0 +1,30 @@
+# CT-002 — Login com Senha Inválida
+
+**Funcionalidade:** Autenticação / Form Authentication  
+**Pré-condição:** Página de login acessível (`/login`)
+
+---
+
+##  Passos:
+1. Acessar `https://the-internet.herokuapp.com/login`
+2. Inserir `tomsmith` no campo **Username**
+3. Inserir `senhaErrada` no campo **Password**
+4. Clicar em **Login**
+
+---
+
+##  Resultado Esperado:
+- Mensagem de erro: "Your password is invalid!"
+- Usuário **não deve ser redirecionado**
+- URL permanece `/login`
+
+---
+
+##  Resultado Obtido:
+- Mensagem exibida: "Your password is invalid!"
+- Usuário corretamente não redirecionado
+- URL permanece `/login`
+- ✅ Teste aprovado.
+
+##  Evidências:
+![CT-002-login-senha-invalida](../evidences/CT-002-login-senha-invalida.png)
