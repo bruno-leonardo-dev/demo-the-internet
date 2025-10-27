@@ -1,0 +1,37 @@
+# BUG-001 — Acesso à área segura após logout usando botão "Voltar" do navegador
+
+**Status:** Aberto  
+**Severidade:** Alta  
+**Prioridade:** Alta  
+**Ambiente:** Windows 10 / Chrome 120  
+**URL:** https://the-internet.herokuapp.com
+
+---
+
+##  Passos para reproduzir:
+1. Acessar `https://the-internet.herokuapp.com/login`.  
+2. Fazer login com `tomsmith` / `SuperSecretPassword!`.  
+3. Confirmar acesso a `/secure`.  
+4. Clicar em **Logout**.  
+5. Após logout, clicar no botão **Voltar** do navegador.
+
+---
+
+##  Resultado Esperado:
+Após logout, ao usar o botão "Voltar" o usuário **não** deve acessar a área segura sem autenticação. A aplicação deve redirecionar para `/login` ou validar a sessão antes de mostrar conteúdo seguro.
+
+---
+
+##  Resultado Obtido:
+- O conteúdo da área segura foi exibido novamente mesmo sem estar autenticado.
+- URL mostrou `/secure` sem exigir re-login.
+
+---
+
+##  Observações / Impacto:
+Permitir acesso à área segura após logout é um problema de sessão/controle de autenticação que pode expor conteúdo protegido.
+
+---
+
+##  Evidências:
+![BUG-001-session-logout-back-button](../evidences/BUG-001-session-logout-back-button.gif)

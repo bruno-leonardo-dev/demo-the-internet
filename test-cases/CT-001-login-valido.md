@@ -1,7 +1,6 @@
 # CT-001 - Login com Credenciais Válidas
 
-**Funcionalidade:** Autenticação
-
+**Funcionalidade:** Autenticação  
 **Pré-condição:** Página de login acessível (`/login`)
 
 ---

@@ -1,6 +1,6 @@
 # CT-002 — Login com Senha Inválida
 
-**Funcionalidade:** Autenticação / Form Authentication  
+**Funcionalidade:** Autenticação  
 **Pré-condição:** Página de login acessível (`/login`)
 
 ---
